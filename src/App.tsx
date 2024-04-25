@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import './App.css'
+import { Web3WalletProvider } from './common/We3ReactLibs/components/Web3WalletProvider'
+import Layout from './common/layout/Layout'
+import { RefreshContextProvider, OXIProvider } from './contexts'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
+import { OXI } from './pages'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Web3WalletProvider>
+      <RefreshContextProvider>
+        <BrowserRouter>
+          <OXIProvider>
+            <Layout>
+              <Routes>
+                <Route path="/" element={<OXI />} />
+                {/* <Route path="/home" element={<Home />} /> */}
+                <Route
+                  path="*"
+                  element={<Navigate to="/" replace />}
+                />
+              </Routes>
+            </Layout>
+          </OXIProvider>
+        </BrowserRouter>
+        <ToastContainer />
+      </RefreshContextProvider>
+    </Web3WalletProvider>
+  )
 }
 
-export default App;
+export default App
