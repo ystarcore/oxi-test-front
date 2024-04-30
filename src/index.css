@@ -6,7 +6,7 @@ body {
   overscroll-behavior: none;
   scroll-behavior: smooth;
   width: 100%;
-  background-color: #141619;
+  background-color: #000000;
   color: #FFFFFF;
   overflow-x: hidden;
   margin: 0;
@@ -46,7 +46,7 @@ code {
 
 
 .primary-btn {
-  background: rgb(246, 192, 0);
+  background: #ffc200;
   border: 1px solid rgba(249, 250, 251, 0.1);
   box-shadow: 0px 4px 4px rgba(15, 23, 42, 0.3);
   padding: 4px 8px;
@@ -55,7 +55,7 @@ code {
 }
 
 .primary-btn:hover {
-  background: rgb(255, 210, 0);
+  background: #ffcc20;
   border: 1px solid rgba(15, 23, 42, 0.3);
 }
 
