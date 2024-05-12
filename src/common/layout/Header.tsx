@@ -138,11 +138,11 @@ export default function Header() {
 
   return (
     <div className="w-full flex justify-between py-4 md:py-6 items-center max-w-[2000px]">
-      <div className="w-full hidden md:flex flex-col gap-2 lg:gap-0 lg:flex-row items-center justify-between">
+      <div className="w-full hidden md:flex flex-col gap-2 md:gap-0 md:flex-row items-center justify-between">
         <div>
           <NavMenu />
         </div>
-        <div className="hidden lg:block">
+        <div className="hidden md:block">
           <div className="flex gap-4 items-center">
             <ChartBox />
             <BuyBox />
