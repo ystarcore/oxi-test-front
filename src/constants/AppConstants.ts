@@ -2,10 +2,8 @@
 import { ethers } from "ethers"
 import { JsonRpcProvider } from "@ethersproject/providers"
 
-export const BackEnd_URL = process.env.REACT_APP_LS_BACKEND_SERVER
-export const TgBotBackEnd_URL = process.env.REACT_APP_TGBOT_BACKEND_SERVER
-export const LogoUpload_URL = "https://api.cloudinary.com/v1_1"
-export const DynamicSale_URL = "https://dynamic.ignitethechain.com"
+export const OAuth_Domain = "dev-568tjlfcai05gp4m.us.auth0.com"
+export const OAuth_ClientId = "xN8hdFBde8XqQv1QVYLMK8fyG9Th0dq5"
 
 export const DEAD_ADDRESS = "0x000000000000000000000000000000000000dead"
 
@@ -24,9 +22,9 @@ export enum CustomChainId {
     Cronos = 25,
 }
 
-export const BuyOXI_URLs: { [chainId in CustomChainId]?: any } = {    
+export const BuyOXI_URLs: { [chainId in CustomChainId]?: any } = {
     [CustomChainId.BSC]: 'https://pancakeswap.finance/swap?outputCurrency=0xE2e7329499E8DDb1f2b04EE4B35a8d7f6881e4ea',
-    [CustomChainId.BSCTestnet]: 'https://pancakeswap.finance/swap?outputCurrency=0xE2e7329499E8DDb1f2b04EE4B35a8d7f6881e4ea'    
+    [CustomChainId.BSCTestnet]: 'https://pancakeswap.finance/swap?outputCurrency=0xE2e7329499E8DDb1f2b04EE4B35a8d7f6881e4ea'
 }
 
 export const UniswapRouterV2_Addresses: { [chainId in CustomChainId]?: any } = {
@@ -73,7 +71,7 @@ export const Rpc_URLS: { [chainId in CustomChainId]?: string } = {
     [CustomChainId.Mainnet]: 'https://rpc.ankr.com/eth',
     [CustomChainId.Goerli]: 'https://eth-goerli.public.blastapi.io',
     [CustomChainId.BSC]: 'https://bsc.nodereal.io',
-    [CustomChainId.BSCTestnet]: 'https://data-seed-prebsc-1-s3.binance.org:8545',
+    [CustomChainId.BSCTestnet]: 'https://bsc-testnet.publicnode.com',
     [CustomChainId.Arbitrum]: 'https://arb1.arbitrum.io/rpc',
     [CustomChainId.Polygon]: 'https://polygon-rpc.com',
     [CustomChainId.Avalanche]: 'https://api.avax.network/ext/bc/C/rpc',

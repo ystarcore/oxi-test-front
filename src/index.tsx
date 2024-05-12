@@ -5,6 +5,7 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { Auth0Provider } from "@auth0/auth0-react"
 import { createBrowserHistory } from "history"
+import { OAuth_ClientId, OAuth_Domain } from './constants/AppConstants'
 
 function getConfig() {
   // Configure the audience here. By default, it will take whatever is in the config
@@ -13,14 +14,17 @@ function getConfig() {
   // don't have an API).
   // If this resolves to `null`, the API page changes to show some helpful info about what to do
   // with the audience.
-  const audience =
-    process.env.audience && process.env.audience !== "YOUR_API_IDENTIFIER"
-      ? process.env.audience
-      : null;
+
+  // const audience =
+  //   process.env.audience && process.env.audience !== "YOUR_API_IDENTIFIER"
+  //     ? process.env.audience
+  //     : null
+
+  const audience = null
 
   return {
-    domain: process.env.domain,
-    clientId: process.env.clientId,
+    domain: OAuth_Domain,
+    clientId: OAuth_ClientId,
     ...(audience ? { audience } : null),
   };
 }
