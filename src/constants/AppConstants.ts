@@ -2,8 +2,8 @@
 import { ethers } from "ethers"
 import { JsonRpcProvider } from "@ethersproject/providers"
 
-export const OAuth_Domain = "dev-568tjlfcai05gp4m.us.auth0.com"
-export const OAuth_ClientId = "xN8hdFBde8XqQv1QVYLMK8fyG9Th0dq5"
+export const OAuth_Domain = "oxi-platform.us.auth0.com"
+export const OAuth_ClientId = "P351wxI2yyuNjkSGE9mWvsvP4UzGFLuV"
 
 export const DEAD_ADDRESS = "0x000000000000000000000000000000000000dead"
 
