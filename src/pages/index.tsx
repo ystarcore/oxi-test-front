@@ -48,13 +48,18 @@ export const OXI = () => {
                         <span className="text-[16px] md:text-[18px]">Connect X</span>
                     </Button>
                 ) : (
-                    <Button
-                        type="primary"
-                        style={{ minWidth: '140px' }}
-                        onClick={() => logout()}
-                    >
-                        <span className="text-[16px] md:text-[18px]">Logout</span>
-                    </Button>
+                    <div className='flex flex-col gap-2'>
+                        <div>
+                            {`${user.name} ${user.profile} ${user.email}`}
+                        </div>
+                        <Button
+                            type="primary"
+                            style={{ minWidth: '140px' }}
+                            onClick={() => logout()}
+                        >
+                            <span className="text-[16px] md:text-[18px]">Logout</span>
+                        </Button>
+                    </div>
                 )}
                 {/* {token && <p>Token: {token}</p>} */}
                 <Button
