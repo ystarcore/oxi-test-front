@@ -6,6 +6,7 @@ import { RefreshContextProvider, OXIProvider } from './contexts'
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'
 import { OXI } from './pages'
+import { TikTokRedirect } from './pages/tiktok/redirect'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Layout>
               <Routes>
                 <Route path="/" element={<OXI />} />
+                <Route path="/redirect" element={<TikTokRedirect />} />
                 {/* <Route path="/home" element={<Home />} /> */}
                 <Route
                   path="*"

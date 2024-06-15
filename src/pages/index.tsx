@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Cookies from 'js-cookie'
 import CountDown from './components/CountDown'
+import TikTokAuthButton from './components/TikTokAuthButton'
 import { Button } from 'src/common/components/Buttons'
 import { useAuth0 } from "@auth0/auth0-react"
 
@@ -62,13 +63,15 @@ export const OXI = () => {
                     </div>
                 )}
                 {/* {token && <p>Token: {token}</p>} */}
-                <Button
+                {/* <Button
                     type="primary"
                     onClick={() => { }}
                     style={{ minWidth: '140px' }}
                 >
                     <span className="text-[16px] md:text-[18px]">Connect Tiktok</span>
-                </Button>
+                </Button> */}
+
+                <TikTokAuthButton/>
             </div>
             <div className="w-full flex items-center justify-center mt-4 sm:mt-8">
                 <Button
